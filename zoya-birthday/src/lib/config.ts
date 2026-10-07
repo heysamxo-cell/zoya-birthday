@@ -21,12 +21,12 @@ export const SITE = {
   fromName: "",
 
   /**
-   * Optional: use your own song instead of the built-in dreamy music.
+   * The song that plays when the music button is tapped ("Perfect" — Ed Sheeran).
    * 1. Put an mp3 in /public/audio (e.g. /public/audio/our-song.mp3)
    * 2. Set musicSrc to "/audio/our-song.mp3"
-   * Leave "" to use the generated, royalty-free dreamy melody.
+   * Set to "" to switch back to the generated dreamy melody.
    */
-  musicSrc: "",
+  musicSrc: "/audio/perfect.mp3",
 };
 
 /**

@@ -55,7 +55,7 @@ export default function MusicPlayer() {
           transition={{ delay: 2.5 }}
           className="glass hidden rounded-full px-4 py-2 text-sm font-semibold text-deep sm:block"
         >
-          Tap for dreamy music
+          Tap to play “Perfect” 🎵
         </motion.span>
       )}
       <motion.button

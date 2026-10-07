@@ -26,8 +26,8 @@ Needs Node 18.17+ (tested on Node 22).
 > 🎂 The birthday is set to **November 21** (`birthday` in `config.ts`).
 
 ### Own music
-The built-in music is a generated, royalty-free "dreamy music box" (Web Audio, no files). To use a real song,
-put an mp3 in `public/audio/` and set `musicSrc: "/audio/our-song.mp3"` in `config.ts`.
+The music button plays **"Perfect" by Ed Sheeran** (`public/audio/perfect.mp3`, set by `musicSrc` in `config.ts`).
+To change the song, replace the mp3 or point `musicSrc` at another file. Set `musicSrc: ""` to use the old generated "dreamy music box" instead.
 Music never autoplays — she taps the 🎵 button; the choice is remembered for the session.
 
 ## Zoya Ki Batein (her tweets)
