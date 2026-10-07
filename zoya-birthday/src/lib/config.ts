@@ -11,9 +11,8 @@ export const SITE = {
   /**
    * Her birthday (month 1–12, day 1–31).
    * The countdown always aims at the NEXT occurrence of this date.
-   * 👉 CHANGE THIS to her real birthday.
-   */
-  birthday: { month: 12, day: 1 },
+     */
+  birthday: { month: 11, day: 21 },
 
   /**
    * Your name, shown under the secret letter ("— Yours, ...").

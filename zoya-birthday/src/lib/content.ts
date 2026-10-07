@@ -4,7 +4,7 @@
  * memories, inside jokes and nicknames to make it even more "her".)
  */
 
-export type IconKey = "smile" | "eye" | "heart" | "habits" | "pout" | "soul";
+export type IconKey = "smile" | "eye" | "heart" | "habits" | "pout" | "soul" | "chat" | "plane" | "quote" | "reel" | "mic";
 
 export const MEMORY_CARDS: { icon: IconKey; title: string; teaser: string; message: string[] }[] = [
   {
@@ -184,18 +184,16 @@ export const WHEEL: { key: WheelKey; label: string; emoji: string; line1: string
   { key: "love", label: "More Love 💕", emoji: "💕", line1: "More", line2: "Love" },
 ];
 
-/**
- * 📸 PHOTO GALLERY
- * To add a real photo:
- *   1. Copy the image into /public/photos (e.g. /public/photos/us-1.jpg)
- *   2. Set  src: "/photos/us-1.jpg"  on a card below.
- * Cards without a `src` show a pretty placeholder.
- */
-export const GALLERY: { src?: string; caption: string; alt: string }[] = [
-  { src: "", caption: "The day we first met", alt: "Memory one" },
-  { src: "", caption: "That one perfect laugh", alt: "Memory two" },
-  { src: "", caption: "Our little adventure", alt: "Memory three" },
-  { src: "", caption: "You, being you", alt: "Memory four" },
-  { src: "", caption: "A tiny moment I'll never forget", alt: "Memory five" },
-  { src: "", caption: "More memories coming soon…", alt: "Memory six" },
+/** 💬 Memories with you — the little everyday things that became the best parts of the day. */
+export const MEMORIES_WITH_YOU: { icon: IconKey; title: string; text: string; big?: boolean }[] = [
+  { icon: "chat", title: "Chatting with you", text: "Hours disappear when we talk. One “hey” turns into a hundred messages, and I never once look at the time." },
+  { icon: "plane", title: "Messaging you", text: "Your name lighting up my screen is the nicest notification in the world. I still smile before I even open it." },
+  { icon: "quote", title: "Reading your tweets", text: "Every tweet is you — bold, funny, fearless. I read them and think: I know her. And I’m so proud of her." },
+  { icon: "reel", title: "Sharing reels on Insta", text: "Reel after reel, “this reminded me of you,” “watch this one.” The scrolling is just an excuse to stay close." },
+  {
+    icon: "mic",
+    title: "Listening to your voice notes",
+    text: "Your voice is the sweetest voice in the world. A voice note from you can fix a bad day, and I may have replayed some of them more than once.",
+    big: true,
+  },
 ];

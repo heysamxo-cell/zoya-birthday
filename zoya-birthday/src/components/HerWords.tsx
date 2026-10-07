@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "./ui/Section";
 import ZoyaAvatar from "./ZoyaAvatar";
 import { IconHeart } from "./Icons";
@@ -22,9 +23,7 @@ const Eye = () => (
 function Byline() {
   return (
     <div className="flex items-center gap-3">
-      <span aria-hidden="true" className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-rose to-hot text-lg font-extrabold text-white shadow-md ring-2 ring-white">
-        Z
-      </span>
+      <Image src="/photos/zoya.jpg" alt="" width={88} height={88} className="h-11 w-11 rounded-full object-cover shadow-md ring-2 ring-white" />
       <div className="leading-tight">
         <p className="font-bold text-deep">Zoya 🕊️</p>
         <p className="text-sm font-semibold text-deep/60">{HANDLE}</p>
@@ -93,6 +92,47 @@ export default function HerWords() {
   const { react } = useAvatar();
   return (
     <Section id="batein" eyebrow={PORTRAIT.eyebrow} title="Zoya Ki Batein 🕊️" subtitle="Her words, her voice — the posts the whole internet stopped to read.">
+      {/* profile card */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-8%" }}
+        transition={{ type: "spring", stiffness: 90, damping: 16 }}
+        className="glass glow-ring mx-auto mb-10 max-w-3xl overflow-hidden rounded-[2.2rem]"
+      >
+        <div className="relative h-28 sm:h-40">
+          <Image src="/photos/zoya-banner.jpg" alt="" fill sizes="(max-width: 768px) 100vw, 768px" className="object-cover" priority={false} />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-white/40 to-rose/20" />
+        </div>
+        <div className="px-5 pb-6 sm:px-9 sm:pb-8">
+          <Image
+            src="/photos/zoya.jpg"
+            alt="Zoya"
+            width={240}
+            height={240}
+            className="relative z-10 -mt-12 h-24 w-24 rounded-full object-cover shadow-glow ring-4 ring-white sm:-mt-16 sm:h-32 sm:w-32"
+          />
+          <h3 className="mt-3 text-3xl font-bold text-deep sm:text-4xl">Zoya 🕊️</h3>
+          <a href={PROFILE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-hot hover:underline">
+            {HANDLE}
+          </a>
+          <p className="mt-3 text-lg font-medium text-deep sm:text-xl">{PORTRAIT.bio}</p>
+          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-deep/70">
+            {PORTRAIT.meta.map((m) => (
+              <span key={m}>{m}</span>
+            ))}
+          </p>
+          <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-deep">
+            {PORTRAIT.profile.map((s) => (
+              <div key={s.label} className="flex items-baseline gap-1.5">
+                <dd className="font-extrabold">{s.value}</dd>
+                <dt className="text-sm font-medium text-deep/70">{s.label}</dt>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </motion.div>
+
       {/* portrait */}
       <div className="glass glow-ring mx-auto grid max-w-5xl items-center gap-8 rounded-[2.2rem] p-6 sm:p-10 md:grid-cols-[minmax(0,15rem)_1fr]">
         <div className="mx-auto w-40 sm:w-52 md:w-full">

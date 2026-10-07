@@ -20,9 +20,10 @@ Needs Node 18.17+ (tested on Node 22).
 | --- | --- |
 | **Her birthday date** (countdown), your name on the letter, optional own song | `src/lib/config.ts` |
 | **All the words**: little-thing cards, surprise boxes, "why she's special", the secret letter, wheel messages, photo captions | `src/lib/content.ts` |
-| **Photos** | drop images into `public/photos/`, then set `src: "/photos/your-file.jpg"` in `GALLERY` (`content.ts`) |
+| **Memories with you** (chat, messages, tweets, reels, voice notes) | `MEMORIES_WITH_YOU` in `content.ts` |
+| **Her tweets & portrait** | `src/lib/tweets.ts` · her photo/banner: `public/photos/zoya.jpg`, `zoya-banner.jpg` |
 
-> ⚠️ The birthday defaults to **December 1** — change `birthday` in `config.ts` to her real date.
+> 🎂 The birthday is set to **November 21** (`birthday` in `config.ts`).
 
 ### Own music
 The built-in music is a generated, royalty-free "dreamy music box" (Web Audio, no files). To use a real song,
@@ -47,7 +48,7 @@ src/
     AvatarProvider.tsx shared mood + "night" scene state (useAvatar().react("happy"))
     Landing, BirthdayHero, Countdown, BirthdayCake, MemoryCards, SurpriseBoxes,
     WhyTimeline, Games (HeartGame, MemoryGame, SpinWheel), SecretMessage,
-    PhotoGallery, FinalSurprise, Navigation, MusicPlayer, CursorFX,
+    MemoriesWithYou, FinalSurprise, Navigation, MusicPlayer, CursorFX,
     ParticleBackground, FloatingHearts, FxLayer (confetti/hearts/petals canvas)
 ```
 

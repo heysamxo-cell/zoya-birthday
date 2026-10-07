@@ -18,7 +18,7 @@ import SurpriseBoxes from "./SurpriseBoxes";
 import WhyTimeline from "./WhyTimeline";
 import Games from "./Games";
 import SecretMessage from "./SecretMessage";
-import PhotoGallery from "./PhotoGallery";
+import MemoriesWithYou from "./MemoriesWithYou";
 import HerWords from "./HerWords";
 import FinalSurprise from "./FinalSurprise";
 
@@ -88,7 +88,7 @@ export default function BirthdayApp() {
               <WhyTimeline />
               <Games />
               <SecretMessage />
-              <PhotoGallery />
+              <MemoriesWithYou />
               <HerWords />
               <FinalSurprise onReplay={replay} />
             </motion.main>

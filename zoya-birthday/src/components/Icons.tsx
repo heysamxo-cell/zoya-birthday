@@ -157,6 +157,49 @@ export const CardIcons = {
       </>,
       p,
     ),
+  chat: (p: P) =>
+    line(
+      <>
+        <path d="M8 10h17a4 4 0 014 4v8a4 4 0 01-4 4H17l-6 5v-5H8a4 4 0 01-4-4v-8a4 4 0 014-4z" />
+        <path d="M33 18h3a4 4 0 014 4v8a4 4 0 01-4 4h-2v4.500l-5.500-4.500H25" opacity=".7" />
+        <path d="M11.500 18h8M11.500 22h5" />
+      </>,
+      p,
+    ),
+  plane: (p: P) =>
+    line(
+      <>
+        <path d="M42 6L6 20.500l12 5L42 6z" />
+        <path d="M18 25.500V38l6-6.500" />
+        <path d="M42 6L24 31.500 18 25.500" />
+      </>,
+      p,
+    ),
+  quote: (p: P) =>
+    line(
+      <>
+        <path d="M8 28V21c0-6 3-10 9-11M8 28h8v9H8z" />
+        <path d="M27 28V21c0-6 3-10 9-11M27 28h8v9h-8z" />
+      </>,
+      p,
+    ),
+  reel: (p: P) =>
+    line(
+      <>
+        <rect x="6" y="6" width="36" height="36" rx="10" />
+        <path d="M6 17h36M16 6l5 11M28 6l5 11" />
+        <path d="M20 26.500v9l8-4.500z" fill="currentColor" />
+      </>,
+      p,
+    ),
+  mic: (p: P) =>
+    line(
+      <>
+        <rect x="17" y="5" width="14" height="25" rx="7" />
+        <path d="M10 22c0 8 6 13 14 13s14-5 14-13M24 35v8M17 43h14" />
+      </>,
+      p,
+    ),
   soul: (p: P) =>
     line(
       <>

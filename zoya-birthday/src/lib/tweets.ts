@@ -98,6 +98,13 @@ export const TWEETS: Tweet[] = [
 export const PORTRAIT = {
   eyebrow: "who is she?",
   title: "The Girl Behind the Batein",
+  bio: "Doctor 🥼 Reality checks only. oh i love being a woman ❤️",
+  meta: ["📍 Delulu", "🎂 Born Nov 21, 2003", "Joined Nov 2023"],
+  profile: [
+    { value: "26.2K", label: "followers" },
+    { value: "2,272", label: "following" },
+    { value: "98.4K", label: "posts" },
+  ],
   paragraphs: [
     "Some people whisper their opinions. Zoya says hers out loud — plainly, fearlessly, and with a wit sharp enough to make you laugh right before it makes you think.",
     "She’s a doctor, which explains a lot: she looks at what’s really wrong, doesn’t flinch, and says it. Online it’s the same instinct. Her “reality checks” are about women’s safety, the double standards everyone else has learned to step around, and the systems that look away when they shouldn’t. She never dresses the truth up to make it comfortable.",
@@ -108,6 +115,6 @@ export const PORTRAIT = {
   stats: [
     { value: "506K", label: "likes on her biggest post" },
     { value: "8.6M", label: "people read that one post" },
-    { value: "10+", label: "posts over 140K likes" },
+    { value: "26.2K", label: "people follow her words" },
   ],
 };
