@@ -159,7 +159,7 @@ function Letter({ onClose }: { onClose: () => void }) {
       role="dialog"
       aria-modal="true"
       aria-label={`A secret letter for ${SITE.name}`}
-      className="fixed inset-0 z-[85] overflow-y-auto"
+      className="fixed inset-0 z-[85] overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -181,11 +181,13 @@ function Letter({ onClose }: { onClose: () => void }) {
         type="button"
         onClick={onClose}
         aria-label="Close letter"
-        className="fixed right-4 top-4 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/20 text-white backdrop-blur-md transition hover:scale-110 hover:bg-white/35 sm:right-6 sm:top-6"
+        className="fixed right-4 top-4 z-[2] grid h-12 w-12 place-items-center rounded-full bg-white/20 text-white backdrop-blur-md transition hover:scale-110 hover:bg-white/35 sm:right-6 sm:top-6"
       >
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
 
+      {/* only this layer scrolls — the background and glow above stay pinned to the screen */}
+      <div className="absolute inset-0 z-[1] overflow-y-auto overscroll-contain">
       <div className="relative mx-auto flex min-h-full max-w-2xl flex-col items-center justify-center px-6 py-20 text-center">
         <motion.div initial={{ opacity: 0, scale: 0.6 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, type: "spring", stiffness: 160, damping: 14 }} className="mb-6 text-white">
           <svg viewBox="0 0 24 24" className="mx-auto h-10 w-10 drop-shadow-[0_0_14px_rgba(255,255,255,.8)]" fill="currentColor"><path d={HEART_PATH} /></svg>
@@ -230,6 +232,7 @@ function Letter({ onClose }: { onClose: () => void }) {
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
       </div>
     </motion.div>
   );
