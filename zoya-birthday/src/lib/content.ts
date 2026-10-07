@@ -9,22 +9,22 @@ export type IconKey = "smile" | "eye" | "heart" | "habits" | "pout" | "soul" | "
 export const MEMORY_CARDS: { icon: IconKey; title: string; teaser: string; message: string[] }[] = [
   {
     icon: "smile",
-    title: "Your Smile",
-    teaser: "The one that fixes everything",
+    title: "The Smile I Imagine",
+    teaser: "Unseen, but I can picture it",
     message: [
-      "There's a moment right before you smile — and I've learned to watch for it.",
-      "Your smile doesn't just show up on your face. It walks into the room, and suddenly everything feels lighter.",
-      "Zoya, never let anyone make you smile less.",
+      "I've never seen your smile, Zoya — but I know it's there.",
+      "I can hear it in your voice, read it in your words, and picture it every time something makes you laugh.",
+      "Some smiles don't need to be seen to be felt. Yours is one of them.",
     ],
   },
   {
     icon: "eye",
-    title: "Your Eyes",
-    teaser: "Little universes",
+    title: "How You See Things",
+    teaser: "Clear, honest, fearless",
     message: [
-      "Your eyes say things your words are too shy to say.",
-      "They sparkle when you're happy, soften when you care, and somehow always make people feel seen.",
-      "I could get lost in them — and honestly, I wouldn't mind.",
+      "You look at things the way a doctor does: you see what's really there, and you say it.",
+      "No sugar-coating, no looking away — just the truth, said with courage.",
+      "I can't tell you what your eyes look like. But I can tell you how you see, and it's remarkable.",
     ],
   },
   {
@@ -32,19 +32,19 @@ export const MEMORY_CARDS: { icon: IconKey; title: string; teaser: string; messa
     title: "Your Kind Heart",
     teaser: "Soft, warm, rare",
     message: [
-      "You care so quietly and so completely that people don't even realize how lucky they are.",
+      "You stand up for people loudly, and you care for them quietly. That's a rare mix.",
       "The world has too many loud hearts and not enough gentle ones like yours.",
       "Please remember: kindness like yours deserves to be returned in full.",
     ],
   },
   {
     icon: "habits",
-    title: "Your Little Habits",
+    title: "Your Little Ways",
     teaser: "The tiny things I notice",
     message: [
-      "The little things you do without even thinking — that's what I notice the most.",
-      "The way you tuck your hair back. The way you get excited about small things. The way you're just… you.",
-      "They're tiny, but they're my favourite parts of your day.",
+      "The way you type when you're excited. The way a reel makes you say “you have to watch this.”",
+      "The way you go from serious to silly in a single message.",
+      "They're tiny, but they're my favourite parts of my day.",
     ],
   },
   {
@@ -52,8 +52,8 @@ export const MEMORY_CARDS: { icon: IconKey; title: string; teaser: string; messa
     title: "Your Cute Anger",
     teaser: "Dangerously adorable",
     message: [
-      "Even when you're upset, you're somehow the cutest person alive.",
-      "The little pout. The 'I'm not talking to you' face. The way it melts in two minutes flat.",
+      "I can't see the pout, but I can feel it through the screen.",
+      "The “I'm not talking to you” energy. The way it melts in two minutes flat.",
       "Fine, I'll say it: I secretly don't mind making you a tiny bit angry. 💗",
     ],
   },
@@ -62,9 +62,9 @@ export const MEMORY_CARDS: { icon: IconKey; title: string; teaser: string; messa
     title: "Your Beautiful Soul",
     teaser: "The prettiest part",
     message: [
-      "You're beautiful on the outside — but that's honestly the least interesting thing about you.",
-      "It's your soul that makes people feel safe, happy and a little more hopeful.",
-      "Zoya, you are a rare kind of beautiful. Never forget that.",
+      "I may never have seen you with my own eyes — but I can feel your vibe, and it's warm, bright and strong.",
+      "It's your soul that makes people feel safe, heard and a little more hopeful.",
+      "Zoya, you are a rare kind of beautiful, and the best part is the one that can't be photographed.",
     ],
   },
 ];
@@ -122,7 +122,7 @@ export const SURPRISE_BOXES: {
     label: "Something Special",
     tone: "lav",
     title: "One Forever-Hug Coupon",
-    body: "Valid for one (1) very long, very warm hug. Redeemable anytime, anywhere, no expiry date. Terms: you must smile afterwards.",
+    body: "Valid for one (1) very long, very warm hug. Redeemable anytime, anywhere, no expiry date. Delivered virtually until further notice. Terms: you must smile afterwards.",
     mood: "love",
     say: "Hug accepted 💗",
     fx: "stars",
@@ -142,7 +142,7 @@ export const SURPRISE_BOXES: {
 
 export const WHY_LINES: string[] = [
   "Because you make ordinary moments feel special.",
-  "Because your smile can change the mood of an entire day.",
+  "Because your words can change the mood of an entire day.",
   "Because you are uniquely YOU.",
   "Because the world is a little prettier with you in it.",
 ];
@@ -163,15 +163,15 @@ export const LETTER: string[] = [
 export const COMPLIMENTS = [
   "You make the whole world feel warmer just by being in it.",
   "Your kindness is quietly the most beautiful thing about you.",
-  "Nobody smiles like you do — it's honestly unfair to everyone else.",
+  "Nobody says things the way you do — it's honestly unfair to everyone else.",
   "You're proof that soft hearts are the strongest ones.",
   "You're the reason ordinary days turn into good memories.",
 ];
 
 export const SECRETS = [
-  "Secret #1: I smile every time I think of how you laugh.",
+  "Secret #1: I smile every time I hear your voice note.",
   "Secret #2: Your name is my favourite thing to say.",
-  "Secret #3: I made this whole little world just to see you smile at it.",
+  "Secret #3: I made this whole little world just to imagine you smiling at it.",
 ];
 
 export type WheelKey = "compliment" | "secret" | "wish" | "surprise" | "hug" | "love";

@@ -91,7 +91,7 @@ export default function MemoryCards() {
   const Icon = c ? CardIcons[c.icon] : null;
 
   return (
-    <Section id="cards" eyebrow="a few of my favourites" title="Little Things That Make You Special 💗" subtitle="Tap each card to open a tiny message.">
+    <Section id="cards" eyebrow="what I feel, even unseen" title="Little Things That Make You Special 💗" subtitle="Tap each card to open a tiny message.">
       <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {MEMORY_CARDS.map((_, i) => (
           <Card key={i} i={i} onOpen={(e) => show(i, e)} />
