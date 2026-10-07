@@ -19,6 +19,7 @@ import WhyTimeline from "./WhyTimeline";
 import Games from "./Games";
 import SecretMessage from "./SecretMessage";
 import PhotoGallery from "./PhotoGallery";
+import HerWords from "./HerWords";
 import FinalSurprise from "./FinalSurprise";
 
 export default function BirthdayApp() {
@@ -88,6 +89,7 @@ export default function BirthdayApp() {
               <Games />
               <SecretMessage />
               <PhotoGallery />
+              <HerWords />
               <FinalSurprise onReplay={replay} />
             </motion.main>
           )}

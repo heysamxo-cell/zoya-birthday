@@ -29,6 +29,10 @@ The built-in music is a generated, royalty-free "dreamy music box" (Web Audio, n
 put an mp3 in `public/audio/` and set `musicSrc: "/audio/our-song.mp3"` in `config.ts`.
 Music never autoplays — she taps the 🎵 button; the choice is remembered for the session.
 
+## Zoya Ki Batein (her tweets)
+`src/lib/tweets.ts` holds her portrait text and the posts shown in the "Her Words" section (`HerWords.tsx`).
+Add a post by copying one object in `TWEETS`; posts with a `note` sit behind a tap-to-read content note.
+
 ## Test links
 - `/?preview=birthday` → shows the "It's Zoya's Birthday!" celebration
 - `/?date=2026-10-08` → pretend her birthday is that date

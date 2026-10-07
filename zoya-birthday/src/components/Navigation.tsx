@@ -14,6 +14,7 @@ export const NAV = [
   { id: "games", label: "Play" },
   { id: "secret", label: "Secret" },
   { id: "gallery", label: "Memories" },
+  { id: "batein", label: "Her Words" },
   { id: "finale", label: "Finale" },
 ];
 
