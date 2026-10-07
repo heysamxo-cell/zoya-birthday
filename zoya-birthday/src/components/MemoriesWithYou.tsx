@@ -13,12 +13,15 @@ function Wave() {
   return (
     <div className="flex h-16 items-center justify-center gap-[3px] sm:h-20 sm:gap-1" aria-hidden="true">
       {BARS.map((h, i) => (
-        <motion.span
+        <span
           key={i}
-          className="w-[3px] rounded-full bg-gradient-to-t from-rose to-hot sm:w-1"
-          style={{ height: `${h * 100}%`, originY: 0.5 }}
-          animate={{ scaleY: [1, 0.35 + ((i * 7) % 5) * 0.18, 1] }}
-          transition={{ duration: 1.1 + (i % 5) * 0.14, repeat: Infinity, ease: "easeInOut", delay: i * 0.04 }}
+          className="wave-bar w-[3px] rounded-full bg-gradient-to-t from-rose to-hot sm:w-1"
+          style={{
+            height: `${h * 100}%`,
+            "--lo": 0.35 + ((i * 7) % 5) * 0.14,
+            animation: `wave ${1.1 + (i % 5) * 0.14}s ease-in-out ${i * 0.04}s infinite`,
+            willChange: "transform",
+          } as React.CSSProperties}
         />
       ))}
     </div>

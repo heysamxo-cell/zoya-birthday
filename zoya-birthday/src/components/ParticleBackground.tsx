@@ -103,6 +103,8 @@ export default function ParticleBackground() {
     const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 
     const resize = () => {
+      // phones fire "resize" when the URL bar slides in/out — re-allocating the canvas then causes visible jank
+      if (W && window.innerWidth === W && Math.abs(window.innerHeight - H) < 160) return;
       const dpr = Math.min(window.devicePixelRatio || 1, env.lowEnd ? 1.25 : 1.75);
       W = window.innerWidth;
       H = window.innerHeight;
@@ -199,10 +201,22 @@ export default function ParticleBackground() {
       ctx.globalAlpha = 1;
     };
 
+    const minGap = env.lowEnd ? 1000 / 30 : 1000 / 50;
+    let lastDraw = 0;
     const loop = (now: number) => {
-      draw(now);
       raf = requestAnimationFrame(loop);
+      if (now - lastDraw < minGap) return;
+      lastDraw = now;
+      draw(now);
     };
+    const onVis = () => {
+      cancelAnimationFrame(raf);
+      if (!document.hidden && !env.reduced) {
+        last = performance.now();
+        raf = requestAnimationFrame(loop);
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
 
     resize();
     make();
@@ -211,6 +225,7 @@ export default function ParticleBackground() {
     else raf = requestAnimationFrame(loop);
     return () => {
       cancelAnimationFrame(raf);
+      document.removeEventListener("visibilitychange", onVis);
       window.removeEventListener("resize", resize);
     };
   }, [env.mounted, env.reduced, env.lowEnd]);

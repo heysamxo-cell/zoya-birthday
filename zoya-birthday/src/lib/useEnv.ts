@@ -22,13 +22,19 @@ export function useEnv(): Env {
         (nav.hardwareConcurrency !== undefined && nav.hardwareConcurrency <= 4) ||
         (nav.deviceMemory !== undefined && nav.deviceMemory <= 4) ||
         mobile;
-      setEnv({
+      const next: Env = {
         mounted: true,
         reduced: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
         finePointer: window.matchMedia("(hover: hover) and (pointer: fine)").matches,
         lowEnd,
         mobile,
-      });
+      };
+      // resize fires constantly on phones (URL bar showing/hiding) — only re-render when something really changed
+      setEnv((prev) =>
+        prev.mounted === next.mounted && prev.reduced === next.reduced && prev.finePointer === next.finePointer && prev.lowEnd === next.lowEnd && prev.mobile === next.mobile
+          ? prev
+          : next,
+      );
     };
     compute();
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
